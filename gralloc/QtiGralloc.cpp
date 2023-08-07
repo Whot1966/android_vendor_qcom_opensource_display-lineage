@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, The Linux Foundation. All rights reserved.
+ * Copyright (c) 2021, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -185,7 +185,7 @@ Error decodeYUVPlaneInfoMetadata(hidl_vec<uint8_t> &in, qti_ycbcr *out) {
   if (!in.size() || !out) {
     return Error::BAD_VALUE;
   }
-  qti_ycbcr *p = reinterpret_cast<qti_ycbcr *>(in.data());
+  //qti_ycbcr *p = reinterpret_cast<qti_ycbcr *>(in.data());
   memcpy(out, in.data(), (YCBCR_LAYOUT_ARRAY_SIZE * sizeof(qti_ycbcr)));
   return Error::NONE;
 }
